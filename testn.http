@@ -1,0 +1,35 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+### Получить список всех тетрадок
+GET http://localhost:5069/api/notebooks
+
+###
+
+### Добавить новую тетрадку
+POST http://localhost:5069/api/notebooks
+Content-Type: application/json
+
+{
+    "subject": "math" ,
+    "year": 2023 ,
+    "numberOfPages": 100 ,
+    "type": "v kletku"
+}
+
+###
+
+### Обновить информацию о тетрадке
+PUT http://localhost:5069/api/notebooks/math
+Content-Type: application/json
+
+{
+    "year": 2024,
+    "numberOfPages": 120,
+    "type": "v lineyku"
+}
+
+###
+
+### Удалить тетрадку
+DELETE http://localhost:5069/api/notebooks/math
+
+###
